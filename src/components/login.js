@@ -27,14 +27,16 @@ function Login() {
           <br />
           <div className="not">
             <p>
-              &#9733; Remember me <a>Login</a>
+              &#9733;Does't have account <a href="register">Register</a>
             </p>{" "}
             <p>
               <a> forget password</a>
             </p>
           </div>
 
-          <Button variant="contained">Login</Button>
+          <Button variant="contained" href="/dashboard">
+            Login
+          </Button>
         </div>
       </div>
       <div className="containerPart2"></div>

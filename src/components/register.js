@@ -44,11 +44,13 @@ function Register() {
             <p>&#9733; Orleady have account</p>{" "}
             <p>
               {" "}
-              <a>Login</a>
+              <a href="/login">Login</a>
             </p>
           </div>
 
-          <Button variant="contained">Register</Button>
+          <Button variant="contained" href="/dashboard">
+            Register
+          </Button>
         </div>
       </div>
       <div className="containerPart2"></div>

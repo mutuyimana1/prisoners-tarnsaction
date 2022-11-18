@@ -17,10 +17,10 @@ function Home() {
       </h2>
       <h2>
         {" "}
-        <a href="/allprisoner">/allprisoners</a>
+        <a href="/allprisoner">allprisoners</a>
       </h2>
       <h2>
-        <a href="/registerprisoner"></a>{" "}
+        <a href="/registerprisoner">register prissoner</a>{" "}
       </h2>
     </div>
   );

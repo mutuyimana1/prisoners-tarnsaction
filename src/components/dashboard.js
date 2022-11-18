@@ -12,6 +12,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Breadcrumb, Layout, Menu } from "antd";
 import "antd/dist/antd.css";
 import React, { Children, useState } from "react";
+import { display } from "@mui/system";
 
 const { Header, Content, Footer, Sider } = Layout;
 const Item = styled(Paper)(({ theme }) => ({
@@ -42,7 +43,9 @@ const items = [
     getItem("Team 2", "8"),
   ]),
   getItem("Files", "9", <FileOutlined />),
+  getItem("Logout", "10", <UserOutlined />),
 ];
+
 const Dashboard = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   return (
@@ -100,6 +103,7 @@ const Dashboard = ({ children }) => {
               </Grid>
             </Box>
           </div>
+
           {children}
         </Content>
         <Footer
