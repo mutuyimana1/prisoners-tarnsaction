@@ -5,14 +5,16 @@ import Login from "../components/login";
 import Register from "../components/register";
 import CustomizedTables from "../components/prisoner";
 import RegisterPrisoner from "../components/registerPrisoner";
+import Home from "../views/home";
 function Index() {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/table" element={<CustomizedTables />} />
+        <Route path="/allprisoners" element={<CustomizedTables />} />
         <Route path="/registerprisoner" element={<RegisterPrisoner />} />
       </Routes>
     </div>
