@@ -13,6 +13,8 @@ import { Breadcrumb, Layout, Menu } from "antd";
 import "antd/dist/antd.css";
 import React, { Children, useState } from "react";
 import { display } from "@mui/system";
+import { DownOutlined } from "@ant-design/icons";
+import { Button, Dropdown, message, Space, Tooltip } from "antd";
 
 const { Header, Content, Footer, Sider } = Layout;
 const Item = styled(Paper)(({ theme }) => ({
@@ -30,12 +32,12 @@ function getItem(label, key, icon, children) {
     label,
   };
 }
-const items = [
-  getItem("Option 1", "1", <PieChartOutlined />),
+const item = [
+  getItem("Option 1", "1", <a href="/"></a>),
   getItem("Option 2", "2", <DesktopOutlined />),
   getItem("Prisoner", "sub1", <UserOutlined />, [
-    getItem("register", "3"),
-    getItem("all prisoners", "4"),
+    getItem("register", "3", <a href="/registerprisoner"></a>),
+    getItem("all prisoners", "4", <a href="/allprisoners"></a>),
     getItem("prisoner that we have their money", "5"),
   ]),
   getItem("Transactions", "sub2", <TeamOutlined />, [
@@ -45,6 +47,41 @@ const items = [
   getItem("Files", "9", <FileOutlined />),
   getItem("Logout", "10", <UserOutlined />),
 ];
+
+const handleButtonClick = (e) => {
+  message.info("Click on left button.");
+  console.log("click left button", e);
+};
+const handleMenuClick = (e) => {
+  message.info("Click on menu item.");
+  console.log("click", e);
+};
+const items = [
+  {
+    label: "Female prison",
+    key: "1",
+    icon: <UserOutlined />,
+  },
+  {
+    label: "Male prison",
+    key: "2",
+    icon: <UserOutlined />,
+  },
+  {
+    label: "Mixed prison ",
+    key: "3",
+    icon: <UserOutlined />,
+  },
+  {
+    label: "juvenile prison ",
+    key: "4",
+    icon: <UserOutlined />,
+  },
+];
+const menuProps = {
+  items,
+  onClick: handleMenuClick,
+};
 
 const Dashboard = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -64,7 +101,7 @@ const Dashboard = ({ children }) => {
           theme="dark"
           defaultSelectedKeys={["1"]}
           mode="inline"
-          items={items}
+          items={item}
         />
       </Sider>
       <Layout className="site-layout">
@@ -89,7 +126,17 @@ const Dashboard = ({ children }) => {
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
                 <Grid xs={3}>
-                  <Item>All female prisoner</Item>
+                  <Item>
+                    {" "}
+                    <Dropdown menu={menuProps}>
+                      <Button style={{ border: "none" }}>
+                        <Space>
+                          Prisons categories
+                          <DownOutlined />
+                        </Space>
+                      </Button>
+                    </Dropdown>
+                  </Item>
                 </Grid>
                 <Grid xs={3}>
                   <Item>All male prisoner</Item>

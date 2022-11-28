@@ -1,7 +1,7 @@
 .register-container{
     display: flex;
     margin: 50px 200px 100px 200px;
-    box-shadow: 1px 1px 0 1px gray;
+    box-shadow: 5px 5px 5px 5px gray;
 }
 .login-container{
     display: flex;

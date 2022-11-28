@@ -60,6 +60,9 @@ function RegisterPrisoner() {
                 autoComplete="current-password"
               />
             </div>
+            <Button variant="contained" style={{ marginTop: "20px" }}>
+              Register
+            </Button>
           </div>
         </div>
       </div>
