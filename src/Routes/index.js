@@ -6,6 +6,7 @@ import Register from "../components/register";
 import CustomizedTables from "../components/prisoner";
 import RegisterPrisoner from "../components/registerPrisoner";
 import Home from "../views/home";
+import Payment from "../components/payment";
 function Index() {
   return (
     <div>
@@ -16,6 +17,7 @@ function Index() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/allprisoners" element={<CustomizedTables />} />
         <Route path="/registerprisoner" element={<RegisterPrisoner />} />
+        <Route path="/sendmoney" element={<Payment />} />
       </Routes>
     </div>
   );

@@ -67,7 +67,7 @@ border: none;
     width: 100%;clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 84%, 46% 100%, 0 84%);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: top; */
+    background-position: center;
 
     /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%,60% 10%, 50% 50%); */
     
@@ -88,7 +88,7 @@ border: none;
 .home-main{
     width: 80%;
     margin: auto;
-
+font-size: 18px;
     height: 60vh;
     display: flex;
 }
@@ -100,7 +100,7 @@ border: none;
 }
 .main-part2{
     padding-top: 30px;
-    width: 60%;
+    /* width: 60%; */
     /* background-color: #a8b1bc; */
     height: 100%;
     display: flex;
@@ -108,52 +108,62 @@ border: none;
 
 .card-leftOne{
     background-color: #0C2A4E;
+    box-shadow:0px 3px 15px 4px #B8B8B8;
+    border-radius: 4px;
 }
 .card-leftOne img{
     width: 70px;
-    height: 80px;
+    height: 70px;
     margin: 20px 90px ;
     border-radius: 50%;
     
 }
 .card-leftOne p{
     padding-bottom: 20px;
-    padding-left:8px;
-    padding-right: 8px;
+    text-align: center;
+    /* padding-right: 8px; */
     color: white;
 }
 .card-leftTwo{
     background-color: #0C2A4E;
+    margin-top: 40px;
+    box-shadow:0px 3px 15px 4px #B8B8B8;
+    border-radius: 4px;
 }
 .card-leftTwo img{
     width: 70px;
-    height: 80px;
+    height: 70px;
     margin: 20px 90px ;
     border-radius: 50%;
 }
 .card-leftTwo p{
     padding-bottom: 20px;
-    padding-left:8px;
+    text-align: center;
     color: white;
-    padding-right: 8px;
+   
 }
 .card-right{
     background-color: #0C2A4E;
-    margin-left: 20px;
-    margin-top: 80px;
-    height: 200px;
+    margin-left: 40px;
+    box-shadow:0px 3px 15px 4px #B8B8B8;
+    border-radius: 4px;
+    /* margin-top: 80px; */
+    height: 360px;
 }
 .card-right img{
     width: 70px;
-    height: 80px;
+    height: 70px;
     margin: 20px 90px ;
     border-radius: 50%;
 
 }
 .card-right p{
     padding-bottom: 20px;
-    padding-left:8px;
-    padding-right: 8px;
+    /* padding-left:30px; */
+    text-align: center;
     color: white;
 
+}
+.home-services{
+    
 }

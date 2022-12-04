@@ -3,6 +3,8 @@ import "./register.css";
 import { Button, TextField } from "@mui/material";
 function Register() {
   return (
+    <div className="register-form">
+
     <div className="register-container">
       <div className="containerPart1">
         <div className="form">
@@ -55,6 +57,8 @@ function Register() {
       </div>
       <div className="containerPart2"></div>
     </div>
+    </div>
+
   );
 }
 

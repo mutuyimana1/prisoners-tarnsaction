@@ -14,10 +14,10 @@ function Home() {
             </div>
             <ul>
               <li>
-                <a>Home</a>{" "}
+                <a href="/">Home</a>{" "}
               </li>
               <li>
-                <a>MakeTransaction</a>
+                <a href="/sendmoney">MakeTransaction</a>
               </li>
 
               <li>
@@ -74,6 +74,16 @@ function Home() {
             <img src={money} />
             <p>card oneasdDsdvasfvfvfvffvv</p>
           </div>
+        </div>
+
+        <div className="home-services">
+          <div className="servicesCardOne">
+
+          </div>
+          <div className="servicesCardTwo">
+
+          </div>
+
         </div>
       </main>
 

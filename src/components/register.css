@@ -1,7 +1,13 @@
+.register-form{
+    background-image: linear-gradient(to left, white,#EC9C3D);
+    height: 100vh;
+    padding: 50px 200px 100px 200px;
+
+}
 .register-container{
     display: flex;
-    margin: 50px 200px 100px 200px;
-    box-shadow: 5px 5px 5px 5px gray;
+   border-radius: 5px;
+    box-shadow:0px 0px 14px 1px #5F5E61;
 }
 .login-container{
     display: flex;
