@@ -30,11 +30,14 @@ function Home() {
               <li>
                 <a> SubmitQuestions</a>
               </li>
+              <li>
+                <a href="/login"> Login/Register</a>
+              </li>
             </ul>
-
+            {/* 
             <div className="button">
-              <h2>Get started</h2>
-            </div>
+              <h2>Login</h2>
+            </div> */}
           </div>
         </div>
       </header>
@@ -117,13 +120,13 @@ function Home() {
       </div>
 
       <div className="home-contact">
-        <div style={{ width: "50%" }}>
+        <div className="contact-one">
           <h1>Chart with us</h1>
           <h1>
             <b>Let's talk About our product to you!!</b>
           </h1>
         </div>
-        <div style={{ padding: "50px 70px", display: "flex" }}>
+        <div className="contact-two">
           <div>
             <button
               style={{
@@ -145,12 +148,31 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="footer">
-        <div>
-          <h1>Logo</h1>
+      <div className="comment">
+        <div className="comment-partone">
+          <h3>
+            Leave comment about our services so that our service will be more
+            effectivelly and efficiantlly
+          </h3>
         </div>
-        <div>
+        <div className="comment-parttwo">
+          <h3>your email</h3>
+          <button className="comment-button">Leave a comment</button>
+        </div>
+      </div>
+
+      <div className="footer">
+        <div className="col-3 column-footer">
+          <h1>Logo </h1>
+        </div>
+        <div className="col-3 cols-footer">
           <MessageIcon /> <ArrowCircleRightIcon />
+        </div>
+        <div className="col-3 col-footer" style={{ color: "white" }}>
+          &copy; Prisons support Team
+        </div>
+        <div className="col-3 columns-footer">
+          <p>content</p>
         </div>
       </div>
     </div>
