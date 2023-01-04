@@ -43,6 +43,7 @@
   color: white;
   position: relative;
   right: 40px;
+  text-decoration: none;
   /* color: black; */
 }
 /* 
@@ -292,7 +293,8 @@
   padding-right: 50px;
   justify-content: space-between;
 }
-.comment-partone {
+.comment-partone h3 {
+  padding-left: 20px;
 }
 .comment-parttwo {
   width: 40%;
@@ -318,4 +320,53 @@
   font-size: 18px;
   padding: 10px;
   margin: 10px 10px;
+}
+.contact-content h2 {
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 3vw; /* make our h1 tag larger */
+  font-family: sans-serif; /* choosing our font */
+  background: linear-gradient(
+      to right,
+      rgba(255, 215, 255, 0) 0%,
+      #0c2a4e,
+      #0c2a4e
+    ),
+    linear-gradient(#ec9d3dc0, rgb(224, 246, 255) 60%, #ec9c3d); /* you can change the colors based on your preference */
+  background-clip: text; /*it defines how far the background should extend within an element, here we set it to text */
+  -webkit-background-clip: text; /*for browsers compatibility */
+  -webkit-text-fill-color: transparent; /* specifies the fill color of text characters. We use transparent to use the background as our text fill  */
+  animation: wave 2000ms ease alternate infinite;
+  transition: all 0.4s ease;
+}
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50vw 10px;
+  }
+}
+button a {
+  text-decoration: none;
+  font-size: 23px;
+}
+button:hover {
+  background-image: linear-gradient(to top, #ec9c3d, white);
+  border: none;
+  border-radius: 7px;
+}
+.contact-form {
+  margin-top: 30px;
+  padding: 30px;
+}
+.contact-content {
+  /* background-image: linear-gradient(to right, white, #ec9d3d20); */
+  border: 1px silver solid;
+
+  clip-path: polygon(15% 0, 100% 0, 83% 100%, 0% 100%);
+  padding-right: 60px;
+  padding-left: 60px;
+  width: 100%;
 }

@@ -1,12 +1,15 @@
-import React from "react";
+import { React, useState } from "react";
 import "./home.css";
 import MessageIcon from "@mui/icons-material/Message";
+import { TextField } from "@mui/material";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import money from "../assets/images/pexels-cottonbro-studio-5909808.jpg";
 import message from "../assets/images/undraw_Modern_life_re_8pdp.png";
 import undraw from "../assets/images/undraw_Credit_card_payment_re_o911.png";
-import { Button, Drawer } from "antd";
-import "antd/dist/antd.css";
+import Header from "../components/header";
+import { Button, Drawer, Modal } from "antd";
+import Footer from "../components/footer";
+// import "antd/dist/antd.css";
 function Home() {
   const [open, setOpen] = useState(false);
 
@@ -20,52 +23,64 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Button type="primary" onClick={showDrawer}>
-        Open
-      </Button>
-      <Drawer
-        title="Basic Drawer"
-        placement="right"
-        onClose={onClose}
-        open={open}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
-      <header>
-        <div className="header">
-          <div className="navbar">
-            <div className="logo">
-              <h2>
-                <span>T</span>rans<span>P</span>r
-              </h2>
-            </div>
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/sendmoney">MakeTransaction</a>
-              </li>
+      <Drawer placement="right" width="50%" onClose={onClose} open={open}>
+        <div className="drawerContent">
+          <div className="contact-content">
+            <h2>Contact Us</h2>
 
-              <li>
-                <a>Claims </a>
-              </li>
-              <li>
-                <a> SubmitQuestions</a>
-              </li>
-              <li>
-                <a href="/login"> Login/Register</a>
-              </li>
-            </ul>
-            {/* 
-            <div className="button">
-              <h2>Login</h2>
-            </div> */}
+            <div className="contact-form">
+              <div style={{ display: "flex" }}>
+                <div style={{ marginRight: "30px", width: "250px" }}>
+                  <TextField
+                    fullWidth
+                    margin="danse"
+                    id="standard-basic"
+                    label="First name"
+                    variant="standard"
+                  />
+                </div>
+                <div style={{ width: "250px" }}>
+                  <TextField
+                    id="standard-basic"
+                    label="Second name"
+                    variant="standard"
+                    fullWidth
+                    margin="danse"
+                  />
+                </div>
+              </div>
+              <TextField
+                id="standard-basic"
+                fullWidth
+                margin="danse"
+                label="Email"
+                variant="standard"
+              />
+              <br /> <br /> <br />
+              <TextField
+                fullWidth
+                label="Message"
+                id="fullWidth"
+                height="300px"
+              />
+              <button
+                style={{
+                  margin: "60px 70px 60px 130px ",
+                  width: "200px",
+                  padding: "10px",
+
+                  justifyContent: "center",
+                }}
+              >
+                {" "}
+                Send
+              </button>
+            </div>
           </div>
         </div>
-      </header>
+      </Drawer>
+
+      <Header />
       <div className="home-background">
         <div className="home-opacity">
           <div className="background-content">
@@ -75,7 +90,10 @@ function Home() {
             </h2>
             <div className="buttons">
               <button className="button btn">How is it done</button>
-              <button className="button btn"> Make Transaction</button>
+              <button className="button btn">
+                {" "}
+                <a href="/login">Make Transaction</a>{" "}
+              </button>
             </div>
           </div>
           <div className="home-text">
@@ -161,6 +179,7 @@ function Home() {
                 display: "flex",
                 justifyContent: "center",
               }}
+              onClick={showDrawer}
             >
               {" "}
               Contact with Us
@@ -186,20 +205,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="footer">
-        <div className="col-3 column-footer">
-          <h1>Logo </h1>
-        </div>
-        <div className="col-3 cols-footer">
-          <MessageIcon /> <ArrowCircleRightIcon />
-        </div>
-        <div className="col-3 col-footer" style={{ color: "white" }}>
-          &copy; Prisons support Team
-        </div>
-        <div className="col-3 columns-footer">
-          <p>content</p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

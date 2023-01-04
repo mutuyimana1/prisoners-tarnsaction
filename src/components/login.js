@@ -41,7 +41,7 @@ function Register() {
                 href="/dashboard"
                 style={{ marginLeft: "10px" }}
               >
-                <a>Login</a>
+                <a href="/view">Login</a>
               </Button>
             </div>
           </div>
