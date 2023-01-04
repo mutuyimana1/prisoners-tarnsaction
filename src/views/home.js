@@ -5,9 +5,34 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import money from "../assets/images/pexels-cottonbro-studio-5909808.jpg";
 import message from "../assets/images/undraw_Modern_life_re_8pdp.png";
 import undraw from "../assets/images/undraw_Credit_card_payment_re_o911.png";
+import { Button, Drawer } from "antd";
+import "antd/dist/antd.css";
 function Home() {
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="home-container">
+      <Button type="primary" onClick={showDrawer}>
+        Open
+      </Button>
+      <Drawer
+        title="Basic Drawer"
+        placement="right"
+        onClose={onClose}
+        open={open}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
       <header>
         <div className="header">
           <div className="navbar">
