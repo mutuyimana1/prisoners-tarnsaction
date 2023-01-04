@@ -11,13 +11,14 @@ function Footer() {
           <h1>Logo </h1>
         </div>
         <div className="col-3 cols-footer">
+          <h2>Contact us</h2>
           <MessageIcon /> <ArrowCircleRightIcon />
         </div>
         <div className="col-3 col-footer" style={{ color: "white" }}>
           &copy; Prisons support Team
         </div>
         <div className="col-3 columns-footer">
-          <p>content</p>
+          <h2>Company</h2>
         </div>
       </div>
     </div>

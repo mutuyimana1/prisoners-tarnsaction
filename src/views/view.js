@@ -136,8 +136,8 @@ function View() {
           <div className="viewfirst">
             <h1>Send money to an inmate </h1>
             <p>
-              Western Union provides simple and reliable money transfer options,{" "}
-              <br />
+              Prison transactions provides simple and reliable money transfer
+              options, <br />
               available 24/7, to loved ones currently in a correctional
               facility.
             </p>

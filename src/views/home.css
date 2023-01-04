@@ -113,7 +113,7 @@
 
   height: 80vh;
   width: 99%;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 84%, 46% 100%, 0 84%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 84%, 46% 100%, 0 84%); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
