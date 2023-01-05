@@ -14,8 +14,13 @@
   background-image: linear-gradient(to top, #ec9c3d, white);
   clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
 }
-.logo h2 {
+/* .logo h2 {
   padding: 20px 30px 10px 50px;
+} */
+.logo img {
+  width: 130px;
+  margin-top: 5px;
+  margin-left: 20px;
 }
 .logo span {
   color: white;

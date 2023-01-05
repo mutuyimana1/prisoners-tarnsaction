@@ -1,5 +1,6 @@
 import React from "react";
 import "../views/home.css";
+import Logo from "../assets/images/logo-removebg-preview (1).png";
 function Header() {
   return (
     <div>
@@ -7,9 +8,7 @@ function Header() {
         <div className="header">
           <div className="navbar">
             <div className="logo">
-              <h2>
-                <span>T</span>rans<span>P</span>r
-              </h2>
+              <img src={Logo} />
             </div>
             <ul>
               <li>
